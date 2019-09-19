@@ -20,7 +20,11 @@ SRC = ft_atoi.c \
 	ft_memcpy.c \
 	ft_isalnum.c \
 	ft_memccpy.c \
-	ft_isascii.c
+	ft_isascii.c \
+	ft_itoa.c \
+	ft_strcpy.c \
+	ft_strdup.c
+
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
