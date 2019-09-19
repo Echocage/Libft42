@@ -15,8 +15,12 @@ SRC = ft_atoi.c \
 	ft_memset.c \
 	ft_tolower.c \
 	ft_toupper.c \
-	ft_isdigit
-
+	ft_isdigit.c \
+	ft_isalpha.c \
+	ft_memcpy.c \
+	ft_isalnum.c \
+	ft_memccpy.c \
+	ft_isascii.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
