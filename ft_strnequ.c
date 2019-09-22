@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/12 13:56:23 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/19 12:39:11 by phanford         ###   ########.fr       */
+/*   Created: 2019/09/21 22:28:41 by phanford          #+#    #+#             */
+/*   Updated: 2019/09/21 22:28:50 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
+int ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	int i;
-
-	i = 0;
-	while (str[i])
-		ft_putchar(str[i++]);
+	while(n--> 0)
+	{
+		if (*s1 != *s2)
+			return (0);
+	}
+	return (*s1 == *s2);
 }

@@ -2,7 +2,7 @@ NAME = libft.a
 
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -I. -c
+CFLAGS = -g -Wall -Werror -Wextra -I. -c
 
 SRC = ft_atoi.c \
 	ft_putchar.c \
@@ -23,8 +23,23 @@ SRC = ft_atoi.c \
 	ft_isascii.c \
 	ft_itoa.c \
 	ft_strcpy.c \
-	ft_strdup.c
-
+	ft_strdup.c \
+	ft_memcmp.c \
+	ft_strstr.c \
+	ft_strncat.c \
+	ft_strcat.c \
+	ft_bzero.c	\
+	ft_strsub.c \
+	ft_isprint.c \
+	ft_strtrim.c \
+	ft_strjoin.c \
+	ft_strchr.c \
+	ft_memchr.c \
+	ft_strsplit.c\
+	ft_strnew.c \
+	ft_memdel.c \
+	ft_memmove.c \
+	ft_strmap.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

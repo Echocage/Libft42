@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/12 13:56:23 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/19 12:39:11 by phanford         ###   ########.fr       */
+/*   Created: 2019/09/21 22:58:17 by phanford          #+#    #+#             */
+/*   Updated: 2019/09/21 22:58:24 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
+void ft_putnbr_fd(int n, int fd)
 {
-	int i;
+	char *str;
 
-	i = 0;
-	while (str[i])
-		ft_putchar(str[i++]);
+	str = ft_itoa(n);
+	write(fd, str, ft_strlen(str));
 }
