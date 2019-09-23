@@ -1,23 +1,19 @@
 #include "libft.h"
-void * ft_memchr(const void *src, int c, size_t length)
+#include <assert.h>
+void	*ft_memchr(const void *src, int c, size_t length)
 {
 	unsigned char *s;
-	int i;
+	unsigned long i;
 
+	if (src == NULL)
+		return (NULL);
 	i = 0;
 	s = (unsigned char *)src;
 	while(length-- > 0)
 	{
-		if (s[i] == c)
+		if ((unsigned char) s[i] == (unsigned char)c)
 			return (void *)(src + i);
 		i++;
 	}
 	return (NULL);
 }
-/*
-int main()
-{
-	char str[] = "aaaaaabccccccc";
-	void *result = ft_memchr(str, 'b',ft_strlen(str));
-
-}*/

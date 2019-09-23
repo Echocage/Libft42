@@ -6,12 +6,12 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:35:47 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/16 12:29:31 by phanford         ###   ########.fr       */
+/*   Updated: 2019/09/21 23:46:53 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int total;
 	int neg;

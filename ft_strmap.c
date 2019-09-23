@@ -6,10 +6,9 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/21 23:08:59 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/21 23:09:41 by phanford         ###   ########.fr       */
+/*   Updated: 2019/09/23 15:36:34 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -22,7 +21,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 		return (NULL);
 	i = 0;
 	str = malloc(ft_strlen((char *) s) * sizeof(char));
-	while(str[i])
+	while(*s)
 		str[i++] = f(*s++);
 	return (str);
 }
