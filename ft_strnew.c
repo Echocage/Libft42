@@ -3,10 +3,11 @@ char * ft_strnew(size_t size)
 {
 	char *str;
 
-	if (!(str = malloc(sizeof(char) * size)))
+	if (!(str = malloc(sizeof(char) * ++size)))
 		return (NULL);
 
 	while(size-- > 0)
 		*str++ = '\0';
+
 	return (str);
 }

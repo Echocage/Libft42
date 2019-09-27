@@ -1,55 +1,71 @@
 #include "libft.h"
-static	int	get_num_strs(char *current_str, char c)
+#include <assert.h>
+static int		get_word_len(char const *str, char c)
 {
-	int num_strs;
+	int	i;
+	int	len;
 
-	num_strs = 0;
-	while ((current_str = ft_strchr(current_str, c)))
+	i = 0;
+	len = 0;
+	while (str[i] == c)
+		i++;
+	while (str[i] != c && str[i] != '\0')
 	{
-		current_str++;
-		if (*current_str && *current_str != c)
-			num_strs++;
+		len++;
+		i++;
 	}
-	return num_strs;
+	return (len);
 }
-
 
 char		**ft_strsplit(char const *s, char c)
 {
-	char *current_str;
-	char *past_str;
 	char **str_arr;
 	int strlen;
-	int index;
-	index = 0;
-	current_str= (char *)s;
-	strlen = get_num_strs(current_str, c);
-	if (!s || !(str_arr = malloc(sizeof(char *)*(strlen+ 1))))
+	int i;
+	int j;
+	int k;
+
+	k = 0;
+	j = 0;
+	i = -1;
+	strlen = get_word_len(s, c);
+	if (!s || !(str_arr = (char **) malloc(sizeof(*str_arr)*(strlen+ 1))))
 		return (NULL);
 
-	if(!strlen)
+	while (++i < strlen)
 	{
-		str_arr[0] = ft_strdup((char *)s);
-		return str_arr;
+		k = 0;
+		if (!(str_arr[i] = ft_strnew(get_word_len(&s[j], c) + 1)) || !get_word_len(&s[j], c))
+			str_arr[i] = NULL;
+		while(s[j] == c)
+			j++;
+		while(s[j] != c && s[j])
+			str_arr[i][k++] = s[j++];
+		if(str_arr[i])
+			str_arr[i][k] = '\0';
 	}
-	current_str = (char *)s;
-
-	while (ft_strlen(current_str))
-	{
-		past_str = current_str;
-		current_str = ft_strchr(current_str, c);
-		current_str++;
-		strlen = current_str - past_str;
-		if (strlen <= 1)
-			continue;
-		past_str[strlen - 1] = '\0';
-		str_arr[index++] = ft_strdup(past_str);
-	}
+	str_arr[i] = NULL;
 	return str_arr;
 }
 /*int main()
 {
-	char teststr[] = "***salut****!**";
-	char ** result = ft_strsplit(teststr, '*');
-	(void)result;
+	char **tt;
+	//tt = ft_strsplit("***salut****!**", '*');
+	//assert(strcmp(tt[0], "salut") == 0);
+	//assert(strcmp(tt[1], "!") == 0);
+	//assert(tt[2] == NULL);
+	tt = ft_strsplit("*****", '*');
+	assert(tt[0] == NULL);
+	tt = ft_strsplit("coucou", '*');
+	assert(strcmp(tt[0], "coucou") == 0);
+	assert(tt[1] == NULL);
+
+	tt = ft_strsplit("salut****", '*');
+	assert(strcmp(tt[0], "salut") == 0);
+	assert(tt[1] == NULL);
+	tt = ft_strsplit("****salut", '*');
+	assert(strcmp(tt[0], "salut") == 0);
+	assert(tt[1] == NULL);
+
+
 }*/
