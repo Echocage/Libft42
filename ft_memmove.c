@@ -1,9 +1,9 @@
 #include "libft.h"
 void *ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *d;
-	unsigned char *s;
-	size_t i;
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
 
 	i = 0;
 	d = (unsigned char *)dst;
@@ -11,7 +11,7 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 	if (s < d)
 	{
 		while(++i <= len)
-			d[len-i] = s[len-i];
+			d[len - i] = s[len - i];
 	}
 	else
 	{

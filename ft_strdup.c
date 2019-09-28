@@ -6,12 +6,12 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 10:42:55 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/21 23:43:51 by phanford         ###   ########.fr       */
+/*   Updated: 2019/09/27 15:03:27 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+
 char	*ft_strdup(const char *s1)
 {
 	int length;
@@ -28,5 +28,5 @@ char	*ft_strdup(const char *s1)
 		i++;
 	}
 	final[i] = '\0';
-	return final;
+	return  (final);
 }

@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 11:37:53 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/23 14:42:03 by phanford         ###   ########.fr       */
+/*   Updated: 2019/09/28 14:49:44 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,5 @@ int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_tolower(int c);
 int					ft_isalnum(int c);
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 #endif
