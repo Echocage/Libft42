@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/21 22:28:41 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/25 13:47:17 by phanford         ###   ########.fr       */
+/*   Updated: 2019/09/28 18:33:40 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	if (!*s2)
 		return (1);
-
-	while(n > 0)
+	while (n > 0)
 	{
 		if (*s1++ != *s2++)
 			return (0);
 		n--;
 	}
-	return n == 0 || (*s1 == *s2);
+	return (n == 0 || (*s1 == *s2));
 }

@@ -2,7 +2,9 @@ NAME = libft.a
 
 CC = gcc
 
-CFLAGS = -g -Wall -Werror -Wextra -I. -c
+CFLAGS = -Wall -Werror -Wextra -I. -c
+
+INC = libft.h
 
 SRC =	ft_strlen.c \
 		ft_strncat.c \
@@ -57,11 +59,13 @@ SRC =	ft_strlen.c \
 		ft_putnbr.c \
 		ft_memmove.c \
 		ft_strlcpy.c
+
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME):
+	$(CC) $(CFLAGS) -c $(SRC) -I libft.h
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

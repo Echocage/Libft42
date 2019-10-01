@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/21 23:16:17 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/21 23:16:18 by phanford         ###   ########.fr       */
+/*   Created: 2019/09/29 15:56:31 by phanford          #+#    #+#             */
+/*   Updated: 2019/09/29 15:56:36 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl(char const *s)
+void	ft_putendl(char const *s)
 {
 	write(1, s, ft_strlen((char *)s));
 	write(1, "\n", 1);

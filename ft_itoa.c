@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 17:38:22 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/27 18:15:21 by phanford         ###   ########.fr       */
+/*   Updated: 2019/09/29 17:59:24 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,13 @@ static	int		num_len(int num)
 	return (number_of_digits);
 }
 
-char			*check_num(int num, int length, int neg)
+char			*check_num(int num, int length)
 {
 	int		mod_result;
 	char	*total;
 
-	length = num_len(num);
+	length = num_len(num) + length;
 	total = (char *)malloc(sizeof(char) * length + 1);
-	if (num == -2147483648)
-		return ("-2147483648");
 	if (num < -2147483648 || num > 2147483647)
 		return (NULL);
 	else if (num == 0)
@@ -54,14 +52,17 @@ char			*ft_itoa(int num)
 	int		neg;
 	char	*total;
 
+	if (num == -2147483648)
+		return ("-2147483648");
+	
 	neg = 1;
 	if (num < 0)
 	{
 		neg = -1;
 		num *= neg;
 	}
-	total = check_num(num, 0, neg);
-	if (neg == -1)
+	total = check_num(num, neg == -1);
+	if (neg == -1 && total)
 		total[0] = '-';
 	return (total);
 }

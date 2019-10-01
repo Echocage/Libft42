@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 14:56:44 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/27 14:56:52 by phanford         ###   ########.fr       */
+/*   Updated: 2019/09/29 15:54:30 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-  ft_strcpy(dest + strlen (dest), src);
-  return dest;
+	ft_strcpy(dest + strlen(dest), src);
+	return (dest);
 }

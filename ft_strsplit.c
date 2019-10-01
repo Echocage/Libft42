@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 18:02:10 by phanford          #+#    #+#             */
+/*   Updated: 2019/09/28 18:10:12 by phanford         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <assert.h>
-static int		get_word_len(char const *str, char c)
+
+static int			get_word_len(char const *str, char c)
 {
 	int	i;
 	int	len;
@@ -17,55 +30,37 @@ static int		get_word_len(char const *str, char c)
 	return (len);
 }
 
-char		**ft_strsplit(char const *s, char c)
+static char			**lazy_init(char const *s, char c, int i, int j)
 {
-	char **str_arr;
-	int strlen;
-	int i;
-	int j;
-	int k;
+	char	**str_arr;
+	int		strlen;
+	int		k;
 
 	k = 0;
-	j = 0;
-	i = -1;
 	strlen = get_word_len(s, c);
-	if (!s || !(str_arr = (char **) malloc(sizeof(*str_arr)*(strlen+ 1))))
+	if (!s || !(str_arr = (char **)malloc(sizeof(*str_arr) * (strlen + 1))))
 		return (NULL);
-
 	while (++i < strlen)
 	{
 		k = 0;
-		if (!(str_arr[i] = ft_strnew(get_word_len(&s[j], c) + 1)) || !get_word_len(&s[j], c))
+		if (!(str_arr[i] = ft_strnew(get_word_len(&s[j], c) + 1))
+				|| !get_word_len(&s[j], c))
 			str_arr[i] = NULL;
-		while(s[j] == c)
+		while (s[j] == c)
 			j++;
-		while(s[j] != c && s[j])
+		while (s[j] != c && s[j])
 			str_arr[i][k++] = s[j++];
-		if(str_arr[i])
+		if (str_arr[i])
 			str_arr[i][k] = '\0';
 	}
 	str_arr[i] = NULL;
-	return str_arr;
+	return (str_arr);
 }
-/*int main()
+
+char				**ft_strsplit(char const *s, char c)
 {
-	char **tt;
-	//tt = ft_strsplit("***salut****!**", '*');
-	//assert(strcmp(tt[0], "salut") == 0);
-	//assert(strcmp(tt[1], "!") == 0);
-	//assert(tt[2] == NULL);
-	tt = ft_strsplit("*****", '*');
-	assert(tt[0] == NULL);
-	tt = ft_strsplit("coucou", '*');
-	assert(strcmp(tt[0], "coucou") == 0);
-	assert(tt[1] == NULL);
+	char **str_arr;
 
-	tt = ft_strsplit("salut****", '*');
-	assert(strcmp(tt[0], "salut") == 0);
-	assert(tt[1] == NULL);
-	tt = ft_strsplit("****salut", '*');
-	assert(strcmp(tt[0], "salut") == 0);
-	assert(tt[1] == NULL);
-
-
-}*/
+	str_arr = lazy_init(s, c, -1, 0);
+	return (str_arr);
+}

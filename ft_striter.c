@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 15:03:39 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/27 15:04:51 by phanford         ###   ########.fr       */
+/*   Updated: 2019/09/28 19:13:29 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_striter(char *s, void (*f)(char*))
 {
-	if(s == NULL || f == NULL)
-		return;
+	if (s == NULL || f == NULL)
+		return ;
 	while (s != NULL && *s)
 		f(s++);
 }

@@ -6,13 +6,13 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/21 22:58:17 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/21 22:58:24 by phanford         ###   ########.fr       */
+/*   Updated: 2019/09/29 15:55:22 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char *str;
 
