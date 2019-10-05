@@ -6,13 +6,17 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:35:47 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/29 17:54:56 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/05 13:08:13 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+static	int	will_overflow(int total)
+{
+	return total > 2147483647 / 10;
+}
+int			ft_atoi(const char *str)
 {
 	int total;
 	int neg;
@@ -30,6 +34,8 @@ int	ft_atoi(const char *str)
 		++str;
 	while (*str >= '0' && *str <= '9')
 	{
+		if(will_overflow(total))
+			return -1;
 		total = total * 10 + (*str - '0');
 		++str;
 	}

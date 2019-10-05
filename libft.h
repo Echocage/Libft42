@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 11:37:53 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/28 14:49:44 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/05 15:34:39 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void				ft_memdel(void **ap);
 char				*ft_strjoin(char const *s1, char const *s2);
 int					ft_strcmp(const char *s1, const char *s2);
 void				ft_strdel(char **as);
-void				ft_putchar_fd(char c, int fd);
+void				ft_putchar_fd(int c, int fd);
 void				ft_putendl(char const *s);
 char				*ft_itoa(int n);
 size_t				ft_strlen(const char *str);
@@ -69,4 +69,10 @@ int					ft_isascii(int c);
 int					ft_tolower(int c);
 int					ft_isalnum(int c);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
+typedef struct s_list
+{
+void *content;
+size_t content_size;
+struct s_list *next;
+} t_list;
 #endif
