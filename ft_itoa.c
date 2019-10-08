@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 17:38:22 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/29 17:59:24 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:13:06 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char			*check_num(int num, int length)
 	char	*total;
 
 	length = num_len(num) + length;
-	total = (char *)malloc(sizeof(char) * length + 1);
+	total = ft_strnew(length + 1);
 	if (num < -2147483648 || num > 2147483647)
 		return (NULL);
 	else if (num == 0)
