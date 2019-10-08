@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/21 22:58:17 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/05 18:16:19 by phanford         ###   ########.fr       */
+/*   Created: 2019/10/05 17:06:50 by phanford          #+#    #+#             */
+/*   Updated: 2019/10/05 17:25:55 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	char *str;
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	str = ft_itoa(n);
-	write(fd, str, ft_strlen(str));
+	if (!alst || !del)
+		return ;
+	if (*alst)
+	{
+		del(*alst, (long)1);
+		free(*alst);
+	}
+	alst = NULL;
 }
