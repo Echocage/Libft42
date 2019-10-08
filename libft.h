@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 11:37:53 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/05 15:34:39 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/05 17:18:00 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,11 @@ int					ft_isascii(int c);
 int					ft_tolower(int c);
 int					ft_isalnum(int c);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
-typedef struct s_list
+typedef	struct		s_list
 {
-void *content;
-size_t content_size;
-struct s_list *next;
-} t_list;
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+t_list * ft_lstnew(void const *content, size_t content_size);
 #endif
