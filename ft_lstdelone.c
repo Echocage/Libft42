@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 17:06:50 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/05 17:25:55 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/08 20:22:00 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 		return ;
 	if (*alst)
 	{
-		del(*alst, (long)1);
+		del(*alst, sizeof(*alst));
 		free(*alst);
 	}
 	alst = NULL;

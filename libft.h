@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 11:37:53 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/05 17:18:00 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/08 21:12:07 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-
+# include <limits.h>
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				ft_putnbr(int n);
@@ -33,7 +33,6 @@ char				*ft_strstr(const char *haystack, const char *needle);
 void				ft_putstr_fd(char const *s, int fd);
 char				*ft_strncat(char *dst, const char *src, size_t n);
 void				*ft_memset(void *dest, int val, size_t len);
-void				ft_putchar(char c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strnew(size_t size);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
@@ -43,7 +42,8 @@ void				ft_memdel(void **ap);
 char				*ft_strjoin(char const *s1, char const *s2);
 int					ft_strcmp(const char *s1, const char *s2);
 void				ft_strdel(char **as);
-void				ft_putchar_fd(int c, int fd);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putchar(char c);
 void				ft_putendl(char const *s);
 char				*ft_itoa(int n);
 size_t				ft_strlen(const char *str);

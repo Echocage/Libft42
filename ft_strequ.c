@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/21 22:25:04 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/29 15:51:14 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/08 20:38:26 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
+	if (!s1 || !s2)
+		return (-1);
 	while (*s1 && *s2)
 		if (*s2++ != *s1++)
 			return (0);

@@ -6,39 +6,36 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:35:47 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/08 16:06:00 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/08 20:37:34 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	will_overflow(int total)
+int			ft_iswhitespace(int c)
 {
-	return (total > 2147483647 / 10);
+	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
+		|| c == ' ');
 }
 
 int			ft_atoi(const char *str)
 {
-	int total;
-	int neg;
+	long total;
+	long neg;
 
 	total = 0;
-	neg = 1;
-	while (*str && (*str >= 0 && *str <= 32))
+	neg = 0;
+	while (ft_iswhitespace(*str))
 		++str;
 	if (*str == '-')
-	{
-		neg = -1;
-		++str;
-	}
-	else if (*str == '+')
+		neg = 1;
+	if (*str == '+' || *str == '-')
 		++str;
 	while (*str >= '0' && *str <= '9')
 	{
-		if (will_overflow(total))
-			return (-1);
-		total = total * 10 + (*str - '0');
-		++str;
+		if (total >= 469762049)
+			return (neg ? 0 : -1);
+		total = total * 10 + (*str++ - '0');
 	}
-	return (total * neg);
+	return (neg ? (int)-total : (int)total);
 }

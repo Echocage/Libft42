@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/29 16:02:07 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/29 16:03:24 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/08 16:43:19 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memchr(const void *src, int c, size_t length)
 	unsigned char *s;
 	unsigned long i;
 
-	if (src == NULL)
-		return (NULL);
 	i = 0;
 	s = (unsigned char *)src;
 	while (length-- > 0)
