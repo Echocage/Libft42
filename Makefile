@@ -59,12 +59,12 @@ SRC =	ft_strlen.c \
 		ft_putnbr.c \
 		ft_memmove.c \
 		ft_strlcpy.c \
-		ft_lstnew \
-		ft_lstdelone \
-		ft_lstdel \
-		ft_lstadd \
-		ft_lstiter \
-		ft_lstmap
+		ft_lstnew.c \
+		ft_lstdelone.c \
+		ft_lstdel.c \
+		ft_lstadd.c \
+		ft_lstiter.c \
+		ft_lstmap.c
 
 OBJ = $(SRC:.c=.o)
 
