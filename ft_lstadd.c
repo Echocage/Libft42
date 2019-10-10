@@ -6,17 +6,17 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 14:59:04 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/10 15:15:39 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/10 15:27:38 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd(t_list **alst, t_list *new_l)
 {
-	if (alst != NULL && new != NULL)
+	if (alst != NULL && new_l != NULL)
 	{
-		new->next = *alst;
-		*alst = new;
+		new_l->next = *alst;
+		*alst = new_l;
 	}
 }
