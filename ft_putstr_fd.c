@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 14:57:40 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/27 15:02:34 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/09 15:51:30 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
+	if (!s)
+		return ;
 	write(fd, s, ft_strlen((char *)s));
 }

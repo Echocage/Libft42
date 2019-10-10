@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 13:56:23 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/29 15:55:50 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/10 15:11:07 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr(const char *str)
 	int i;
 
 	i = 0;
+	if (!str)
+		return ;
 	while (str[i])
 		ft_putchar(str[i++]);
 }

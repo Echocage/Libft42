@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/28 18:25:35 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/08 20:42:34 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/10 15:11:20 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char			*ft_strtrim(char const *s)
 	while (is_whitespace(s[j]))
 		j--;
 	if (!(result = ft_strnew((j - i) + 1)))
-			return (NULL);
+		return (NULL);
 	while (i <= j)
 		result[c++] = s[i++];
 	result[c] = '\0';

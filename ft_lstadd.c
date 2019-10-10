@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/15 18:14:19 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/10 15:11:33 by phanford         ###   ########.fr       */
+/*   Created: 2019/10/10 14:59:04 by phanford          #+#    #+#             */
+/*   Updated: 2019/10/10 15:15:39 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(int c)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	ft_putchar_fd(c, 1);
+	if (alst != NULL && new != NULL)
+	{
+		new->next = *alst;
+		*alst = new;
+	}
 }
