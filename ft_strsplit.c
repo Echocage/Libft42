@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/28 18:02:10 by phanford          #+#    #+#             */
-/*   Updated: 2019/09/28 18:10:12 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/11 15:34:13 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ static char			**lazy_init(char const *s, char c, int i, int j)
 char				**ft_strsplit(char const *s, char c)
 {
 	char **str_arr;
-
+	if (!s)
+		return (NULL);
 	str_arr = lazy_init(s, c, -1, 0);
 	return (str_arr);
 }

@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 17:38:22 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/10 15:15:21 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/11 15:07:36 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static	int		num_len(int num)
 	return (number_of_digits);
 }
 
-char			*check_num(int num, int is_neg)
+static char		*check_num(int num, int is_neg)
 {
 	int		mod_result;
 	char	*total;
