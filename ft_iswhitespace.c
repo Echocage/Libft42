@@ -6,11 +6,12 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 23:55:29 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/11 23:56:48 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/12 00:34:48 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iswhitespace(char c)
+int	ft_iswhitespace(int c)
 {
-	return (c == '\t' || c == '\r' || c == ' ' || c == '\v');
+	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
+		|| c == ' ');
 }

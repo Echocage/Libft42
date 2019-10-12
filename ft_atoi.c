@@ -6,17 +6,11 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 14:35:47 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/11 22:47:16 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/12 00:34:19 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_iswhitespace(int c)
-{
-	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
-		|| c == ' ');
-}
 
 int			ft_atoi(const char *str)
 {
