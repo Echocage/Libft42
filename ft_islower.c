@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 00:16:22 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/12 00:23:24 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/12 00:29:00 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ int	ft_islower(char *s)
 
 	found = 0;
 	while (*s)
+	{
 		if (*s >= 'a' && *s <= 'z')
 			found = 1;
 		if (*s >= 'A' && *s++ <= 'Z')
 			return (0);
+	}
 	return (found);
 }

@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 23:53:55 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/11 23:55:04 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/12 00:27:48 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	ft_countnum(char *s)
 {
-	int i = 0;
-	while(*s)
+	int i;
+
+	i = 0;
+	while (*s)
 	{
 		if (ft_isdigit(*s++))
 			i++;

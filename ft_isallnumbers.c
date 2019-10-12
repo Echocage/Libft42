@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 00:06:44 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/12 00:07:09 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/12 00:29:52 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 int	ft_isallnumbers(char *s)
 {
-	while(*s)
+	while (*s)
 	{
-		if(!(ft_isdigit(*s)) && *s != '-' && *s++ != '+')
+		if (!(ft_isdigit(*s)) && *s != '-' && *s++ != '+')
 			return (0);
 	}
 	return (1);
-
 }
