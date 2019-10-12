@@ -6,7 +6,7 @@
 /*   By: phanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 11:37:53 by phanford          #+#    #+#             */
-/*   Updated: 2019/10/11 20:52:01 by phanford         ###   ########.fr       */
+/*   Updated: 2019/10/12 00:12:26 by phanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,10 @@ int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_tolower(int c);
 int					ft_isalnum(int c);
+int					ft_containsnum(char *s);
+int					ft_countnum(char *s);
+int					ft_isallnumbers(char *s);
+int					ft_iswhitespace(char c);
 typedef	struct		s_list
 {
 	void			*content;
