@@ -63,7 +63,12 @@ SRC =	ft_strlen.c \
 		ft_lstdel.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
-		ft_lstmap.c
+		ft_lstmap.c \
+		ft_isupper.c \
+		ft_islower.c \
+		ft_iswhitespace.c \
+		ft_countnum.c \
+		ft_isallnumbers.c \
 
 OBJ = $(SRC:.c=.o)
 
