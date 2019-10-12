@@ -58,7 +58,6 @@ SRC =	ft_strlen.c \
 		ft_striteri.c \
 		ft_putnbr.c \
 		ft_memmove.c \
-		ft_strlcpy.c \
 		ft_lstnew.c \
 		ft_lstdelone.c \
 		ft_lstdel.c \
