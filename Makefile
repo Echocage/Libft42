@@ -64,8 +64,8 @@ SRC =	ft_strlen.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
-		ft_isupper.c \
-		ft_islower.c \
+		ft_isallupper.c \
+		ft_isalllower.c \
 		ft_iswhitespace.c \
 		ft_countnum.c \
 		ft_isallnumbers.c \
