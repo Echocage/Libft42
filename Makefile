@@ -69,7 +69,7 @@ SRC =	ft_strlen.c \
 		ft_iswhitespace.c \
 		ft_countnum.c \
 		ft_isallnumbers.c \
-
+		ft_containsnum.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
